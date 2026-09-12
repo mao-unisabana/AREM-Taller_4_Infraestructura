@@ -1,0 +1,79 @@
+<mxfile host="Electron" agent="cowork">
+  <diagram id="mapa-infraestructura-borrador-redexpress" name="Mapa Infraestructura Borrador - RedExpress">
+    <mxGraphModel dx="934" dy="710" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="700" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="zonaClientes" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#8c9bab;dashed=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontStyle=1;fontSize=13;fontColor=#4a5568;" value="Clientes" vertex="1">
+          <mxGeometry height="460" width="220" x="20" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="usuario" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1168bd;strokeColor=#0b4884;fontColor=#ffffff;fontStyle=1;fontSize=11;" value="📱 App Móvil&#xa;Usuario Final" vertex="1">
+          <mxGeometry height="70" width="180" x="40" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="mensajero" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1168bd;strokeColor=#0b4884;fontColor=#ffffff;fontStyle=1;fontSize=11;" value="📱 App Móvil&#xa;Mensajero" vertex="1">
+          <mxGeometry height="70" width="180" x="40" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="operador" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1168bd;strokeColor=#0b4884;fontColor=#ffffff;fontStyle=1;fontSize=11;" value="💻 Portal Web&#xa;Operador" vertex="1">
+          <mxGeometry height="70" width="180" x="40" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="zonaBorde" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#8c9bab;dashed=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontStyle=1;fontSize=13;fontColor=#4a5568;" value="Borde / Global" vertex="1">
+          <mxGeometry height="460" width="280" x="300" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lb" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c0392b;strokeColor=#7b1f1f;fontColor=#ffffff;fontStyle=1;fontSize=11;" value="⚠️ Balanceador de Carga&#xa;(instancia única)" vertex="1">
+          <mxGeometry height="70" width="240" x="320" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="monitor" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;fontStyle=1;fontSize=11;" value="Servicio de Monitoreo&#xa;y Alertas" vertex="1">
+          <mxGeometry height="70" width="240" x="320" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="db" parent="1" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#c0392b;strokeColor=#7b1f1f;fontColor=#ffffff;fontStyle=1;fontSize=11;" value="⚠️ Base de Datos Distribuida&#xa;(escritura única - Bogotá)" vertex="1">
+          <mxGeometry height="90" width="220" x="330" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="zonaBogota" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#8c9bab;dashed=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontStyle=1;fontSize=13;fontColor=#4a5568;" value="Región Bogotá" vertex="1">
+          <mxGeometry height="240" width="260" x="640" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gwbog" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;fontStyle=1;fontSize=11;" value="API Gateway&#xa;Bogotá" vertex="1">
+          <mxGeometry height="60" width="220" x="660" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="rutasbog" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#438dd5;strokeColor=#2e6295;fontColor=#ffffff;fontStyle=1;fontSize=11;" value="Módulo de Procesamiento&#xa;de Rutas y Paquetes - Bogotá" vertex="1">
+          <mxGeometry height="70" width="220" x="660" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="zonaMedellin" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#8c9bab;dashed=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=6;fontStyle=1;fontSize=13;fontColor=#4a5568;" value="Región Medellín" vertex="1">
+          <mxGeometry height="180" width="260" x="640" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="gwmed" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#c0392b;strokeColor=#7b1f1f;fontColor=#ffffff;fontStyle=1;fontSize=11;" value="⚠️ API Gateway - Medellín&#xa;(sin módulo de rutas propio)" vertex="1">
+          <mxGeometry height="80" width="220" x="660" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="usuario" style="endArrow=block;html=1;strokeColor=#555555;strokeWidth=1.5;fontSize=9;fontColor=#333333;labelBackgroundColor=#ffffff;" target="lb">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="mensajero" style="endArrow=block;html=1;strokeColor=#555555;strokeWidth=1.5;fontSize=9;fontColor=#333333;labelBackgroundColor=#ffffff;" target="lb">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="operador" style="endArrow=block;html=1;strokeColor=#555555;strokeWidth=1.5;fontSize=9;fontColor=#333333;labelBackgroundColor=#ffffff;" target="lb">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="lb" style="endArrow=block;html=1;strokeColor=#555555;strokeWidth=1.5;fontSize=9;fontColor=#333333;labelBackgroundColor=#ffffff;" target="gwbog">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="lb" style="endArrow=block;html=1;strokeColor=#555555;strokeWidth=1.5;fontSize=9;fontColor=#333333;labelBackgroundColor=#ffffff;" target="gwmed">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="gwbog" style="endArrow=block;html=1;strokeColor=#555555;strokeWidth=1.5;fontSize=9;fontColor=#333333;labelBackgroundColor=#ffffff;" target="rutasbog">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="gwmed" style="endArrow=block;html=1;strokeColor=#c0392b;strokeWidth=2;fontSize=9;fontColor=#c0392b;labelBackgroundColor=#ffffff;fontStyle=1;" target="rutasbog" value="cuello de botella">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="rutasbog" style="endArrow=block;html=1;strokeColor=#555555;strokeWidth=1.5;fontSize=9;fontColor=#333333;labelBackgroundColor=#ffffff;" target="db">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="gwbog" style="endArrow=block;html=1;dashed=1;strokeColor=#777777;strokeWidth=1;fontSize=9;fontColor=#333333;labelBackgroundColor=#ffffff;" target="monitor">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="gwmed" style="endArrow=block;html=1;dashed=1;strokeColor=#777777;strokeWidth=1;fontSize=9;fontColor=#333333;labelBackgroundColor=#ffffff;" target="monitor">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
